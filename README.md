@@ -1,7 +1,7 @@
 # foodGPT :poultry_leg:
 Created by: [@sammymans](https://www.github.com/sammymans) 🦧, [@rspcunningham](https://www.github.com/rspcunningham) 😈, and [@rohansaxena1224](https://www.github.com/rohansaxena1224) 🦦
 
-foodGPT is a product that leverages machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cooks occaisionally or not at all. Those who do cook throw out more than 50% of their ingredients for several reasons: 
+foodGPT is a product that leverages machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cooks occasionally or not at all. Those who do cook throw out more than 50% of their ingredients for several reasons: 
 
 - low cooking confidence
 - purchased too many groceries for the week
@@ -17,7 +17,7 @@ The Smart Substitution Model first tokenizes ingredients to a unique 4-digit ID,
 
 ## Recommendation Model
 
-The Recommendation Mystem is a collaborative filtering model that provides recomendations based on user interactions. The dataset provided review data that was converted to a matrix comparing users and recipes, with individual values representing the rating that user gave to that recipe. Two latent feature matrices are generated, which are iteratively solved for by the model and multiplied together to fill in the missing review data of the initially sparse review matrix. The rating for each recipe is normalized to between 0 and 1. 
+The Recommendation System is a collaborative filtering model that provides recommendations based on user interactions. The dataset provided review data that was converted to a matrix comparing users and recipes, with individual values representing the rating that user gave to that recipe. Two latent feature matrices are generated, which are iteratively solved for by the model and multiplied together to fill in the missing review data of the initially sparse review matrix. The rating for each recipe is normalized to between 0 and 1. 
 
 ## Combined Model
 
@@ -35,20 +35,13 @@ Through this project, the team faced multiple issues:
 
 The next step is to completely implement the computer vision aspect of the product. Ideally, the application will allow a user to take a photo of their fridge, pantry, or grocery receipt to easily load ingredients into their inventory ('shelf'). We will add an algorithm to tokenize these groceries for a cohesive data pipeline.
 
-Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective because it will not be limited by the recipes found on food.com. It will also be more 'consistent' in the recipes it provides, rather than having certain recipes clearly in the 'form' of the source that added htem to food.com. This will allow for more effective recommendations based on user preferences, ultimately reducing food waste.
+Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective because it will not be limited by the recipes found on food.com. It will also be more 'consistent' in the recipes it provides, rather than having certain recipes clearly in the 'style' of the source that added them to food.com. This will allow for more effective recommendations based on user preferences, ultimately reducing food waste.
 
 ## How it Works
 
 1. The user first uses the camera feature of the app to identify the new groceries they want to add to the foodGPT app
-
 2. The user then takes a picture of their fridge to update the list of ingredients they have using computer vision. It is then updated as a list.
-
 3.  Next, the user provides a prompt to get a recommendation from the model
-
 4. The user can also see the list of their favourite recipes to refer to at a later time
 
-
-
-
 https://user-images.githubusercontent.com/79066805/236372270-62de19d6-d56e-4ce2-afde-92fc03527e9e.mp4
-
