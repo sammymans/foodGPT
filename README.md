@@ -10,6 +10,8 @@ foodGPT has three main components: computer vision, ingredient substitution, and
 
 This project was built using [This Dataset](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
 
+## How it Works
+
 ## Smart Substitution Model
 
 ## Matrix Factorization Recommendation Model
@@ -19,3 +21,7 @@ This project was built using [This Dataset](https://www.kaggle.com/datasets/shuy
 ## Discussion
 
 ## Future Considerations
+
+One objective to pursue is to implement computer vision to allow users to easily load in their 'shelf' or 'fridge' data into the application. The idea is to use computer vision to take a picture of a receipt, tokenize the groceries, and add this list of available ingredients to the application to being accurately reccomending recipes.
+
+Additionally, instead of a recommendation approach to suggesting recipes to users, a generative recipe approach could be researched. This way, our product could become more flexible to user's available ingredients, thus further reducing food waste.
