@@ -31,3 +31,7 @@ Throughout this project, there were multiple challenges the team faced, which ar
 - Validating unsupervised model results
 
 ## Future Considerations
+
+One objective to pursuit is to completely implement the computer vision aspect to the product. Ideally, the application will work by taking a photo of the user's groceries receipt to easily load in their 'shelf' or 'fridge' data to be processed for the recommendation system. We will add an algorithm to tokenize these groceries for a cohesive data pipeline.
+
+Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective rather than being limited to recipes that are found on food.com. This will allow for more effective recommendations based on user preferences, as well as ultimately reducing food waste.
