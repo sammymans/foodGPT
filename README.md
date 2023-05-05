@@ -8,6 +8,8 @@ foodGPT is a product that aims to incorporate machine learning to optimize one's
 
 foodGPT has three main components: computer vision, ingredient substitution, and recipe recommendation. Computer Vision is yet to be implemented, however the other two components can be found in code.
 
+This project was built using [This Dataset](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
+
 ## Smart Substitution Model
 
 ## Matrix Factorization Recommendation Model
