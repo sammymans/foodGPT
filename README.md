@@ -35,3 +35,17 @@ Throughout this project, there were multiple challenges the team faced, which ar
 One objective to pursuit is to completely implement the computer vision aspect to the product. Ideally, the application will work by taking a photo of the user's groceries receipt to easily load in their 'shelf' or 'fridge' data to be processed for the recommendation system. We will add an algorithm to tokenize these groceries for a cohesive data pipeline.
 
 Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective rather than being limited to recipes that are found on food.com. This will allow for more effective recommendations based on user preferences, as well as ultimately reducing food waste.
+
+## How it Works
+
+1. the user first uses the camera feature of the app to identify the new groceries they want to add to the foodGPT app
+[img1]
+
+2. The user then takes a picture of their fridge to update the list of ingredients they have using computer vision. It is then updated as a list.
+[img2] [img3]
+
+3.  Next, the user provides a prompt to get a recommendation from the model
+[img4]
+
+4. The user can also see the list of their favourite recipes to refer to at a later time
+[img5]
