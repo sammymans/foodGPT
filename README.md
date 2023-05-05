@@ -39,11 +39,12 @@ Additionally, a generative machine learning recipe recommendation approach shoul
 ## How it Works
 
 1. the user first uses the camera feature of the app to identify the new groceries they want to add to the foodGPT app
-[img1]![image](https://user-images.githubusercontent.com/79066805/236366823-786ed2eb-292b-4034-a18d-faf7564a001f.png)
+![image](https://user-images.githubusercontent.com/79066805/236366823-786ed2eb-292b-4034-a18d-faf7564a001f.png)
 
 
 2. The user then takes a picture of their fridge to update the list of ingredients they have using computer vision. It is then updated as a list.
-[img2] [img3]
+![image](https://user-images.githubusercontent.com/79066805/236366912-0af988db-8b86-4cb9-83a5-b57738dff90d.png)
+
 
 3.  Next, the user provides a prompt to get a recommendation from the model
 [img4]
