@@ -1,10 +1,10 @@
 # foodGPT :poultry_leg:
 
-foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. A minority of XX% of university cook regularly - the other portion seldom cook or never cook. Additionally, those who cook approximately waste XX% of ingredients for several reasons: 
+foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. Only 15% of university cook regularly - the other portion cook occaisionally or never at all. Those who do cook waste approximately 50% of ingredients for several reasons: 
 
 - low cooking confidence
 - purchased too many groceries for the week
-- unsure of what to do with excess ingredients
+- unsure of what to do with excess leftovers
 
 foodGPT has three main components: computer vision, ingredient substitution, and recipe recommendation. Computer Vision is yet to be implemented, however the other two components can be found in code.
 
