@@ -1,31 +1,31 @@
 # foodGPT :poultry_leg:
-Created by: [@sammymans](https://www.github.com/sammymans) 🦧, [@rspcunningham](https://www.github.com/rspcunningham) 😈, and [@rohansaxena1224](https://www.github.com/rohansaxena1224) 🇮🇳
+Created by: [@sammymans](https://www.github.com/sammymans) 🦧, [@rspcunningham](https://www.github.com/rspcunningham) 😈, and [@rohansaxena1224](https://www.github.com/rohansaxena1224) 🦦
 
-foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cook occaisionally or never at all. Those who do cook waste approximately 50% of ingredients for several reasons: 
+foodGPT is a product that leverages machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cooks occaisionally or not at all. Those who do cook throw out more than 50% of their ingredients for several reasons: 
 
 - low cooking confidence
 - purchased too many groceries for the week
 - unsure of what to do with excess leftovers
 
-foodGPT has three main components: computer vision, ingredient substitution, and recipe recommendation. Computer Vision is yet to be implemented, however the other two components can be found in code.
+foodGPT has three main components: an ingredient substitution model, a recommendation engine, and a computer vision pipeline (which has yet to be implemented, see Future Considerations below). 
 
-This project was built using [a Kaggle dataset of recipes from food.com](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
+This project was built using [a Kaggle dataset of aggregated recipes from food.com](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
 
 ## Smart Substitution Model
 
-The Smart Substitution Model first tokenizes ingredients to a unique 4-digit ID allowing a recipe to be described as a list of ingredient IDs. This list of ingredient IDs is converted to vectors using the Word2Vec model and is then compared to other recipes to find recipes with similar ingredients. For each recipe it provides a similarity score, which identifies how similar a recipe is to the list of user ingredients from a scale of 0 to 1. The model undestands making substitutions based on the user's shelf such as replacing yellow onions for red onions or coffee for espresso. 
+The Smart Substitution Model first tokenizes ingredients to a unique 4-digit ID, allowing each recipe to be described as a unique list of these IDs. Ingredient embeddings are generated using a Word2Vec implementation that takes each ID as a 'word' and each recipe as the provided context. Using a ball tree algorithm, the IDs from the user's inventory are compared with the ingredients in each recipe, generating a similarity score which identifies how similar a recipe is to the best match from what the user has available. Smart substitutions are provided, such as replacing white onions with yellow onions, or coffee for espresso based on the model's knowledge of ingredient usage context. The similarity score for each recipe is generated between 0 and 1. 
 
-## Matrix Factorization Recommendation Model
+## Recommendation Model
 
-The recommendation system is a collaborative filtering model which recommends based on user interactions. The dataset was converted to a rating matrix with users as rows, recipe ID's as columns, and the ratings as the values within the matrix. The matrix factorization model splits the matrix into two matrices (user ID vs latent features and recipe IDs vs latent features) which is used to recommend recipes to the user.
+The Recommendation Mystem is a collaborative filtering model that provides recomendations based on user interactions. The dataset provided review data that was converted to a matrix comparing users and recipes, with individual values representing the rating that user gave to that recipe. Two latent feature matrices are generated, which are iteratively solved for by the model and multiplied together to fill in the missing review data of the initially sparse review matrix. The rating for each recipe is normalized to between 0 and 1. 
 
 ## Combined Model
 
-The output of the smart substitution model is a dataframe with the columns Recipe ID, Ingredient List, and Similarity Score Rating. The output of the recommendation model for each user is a dataframe with a column for Recipe ID and a column for a normalized rating. These are merged based on the Recipe ID and a combined rating is calculated by averaging the similarity score and normalized rating. The dataframe is sorted in descending order for the combined rating to output the best recipes for the user. 
+The output of the smart substitution model is a dataframe with the columns Recipe ID, Ingredient List, and Similarity Score. The output of the recommendation model for each user is a dataframe with the columns Recipe ID, and Rating. The two scorings are combined by simply averaging their values to create a hybrid score that reflects both how minor the substitutions needed are and how likely the user is to enjoy it.
 
-## Discussion
+## Challenges
 
-Throughout this project, there were multiple challenges the team faced, which are outlined below. 
+Through this project, the team faced multiple issues:
 - Handling NaN values for matrix factorization models
 - Dealing with very sparse matrices for accurate matrix factorization
 - Reducing time complexity of comparison algorithm
@@ -33,24 +33,22 @@ Throughout this project, there were multiple challenges the team faced, which ar
 
 ## Future Considerations
 
-One objective to pursuit is to completely implement the computer vision aspect to the product. Ideally, the application will work by taking a photo of the user's groceries receipt to easily load in their 'shelf' or 'fridge' data to be processed for the recommendation system. We will add an algorithm to tokenize these groceries for a cohesive data pipeline.
+The next step is to completely implement the computer vision aspect of the product. Ideally, the application will allow a user to take a photo of their fridge, pantry, or grocery receipt to easily load ingredients into their inventory ('shelf'). We will add an algorithm to tokenize these groceries for a cohesive data pipeline.
 
-Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective rather than being limited to recipes that are found on food.com. This will allow for more effective recommendations based on user preferences, as well as ultimately reducing food waste.
+Additionally, a generative machine learning recipe recommendation approach should be explored. This method may be more effective because it will not be limited by the recipes found on food.com. It will also be more 'consistent' in the recipes it provides, rather than having certain recipes clearly in the 'form' of the source that added htem to food.com. This will allow for more effective recommendations based on user preferences, ultimately reducing food waste.
 
 ## How it Works
 
-1. the user first uses the camera feature of the app to identify the new groceries they want to add to the foodGPT app
-
-![image](https://user-images.githubusercontent.com/79066805/236366823-786ed2eb-292b-4034-a18d-faf7564a001f.png)
-
+1. The user first uses the camera feature of the app to identify the new groceries they want to add to the foodGPT app
 
 2. The user then takes a picture of their fridge to update the list of ingredients they have using computer vision. It is then updated as a list.
 
-![image](https://user-images.githubusercontent.com/79066805/236366912-0af988db-8b86-4cb9-83a5-b57738dff90d.png)
-
-
 3.  Next, the user provides a prompt to get a recommendation from the model
-[img4]
 
 4. The user can also see the list of their favourite recipes to refer to at a later time
-[img5]
+
+
+
+
+https://user-images.githubusercontent.com/79066805/236372270-62de19d6-d56e-4ce2-afde-92fc03527e9e.mp4
+
