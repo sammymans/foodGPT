@@ -1,4 +1,4 @@
-# foodGPT
+# foodGPT :watermelon: :poultry_leg:
 
 foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. A minority of XX% of university cook regularly - the other portion seldom cook or never cook. Additionally, those who cook approximately waste XX% of ingredients for several reasons: 
 
