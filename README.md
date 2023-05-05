@@ -16,6 +16,8 @@ The Smart Substitution Model first tokenizes ingredients to a unique 4-digit ID 
 
 ## Matrix Factorization Recommendation Model
 
+The recommendation system is a collaborative filtering model which recommends based on user interactions. The dataset was converted to a rating matrix with users as rows, recipe ID's as columns, and the ratings as the values within the matrix. The matrix factorization model splits the matrix into two matrices (user ID vs latent features and recipe IDs vs latent features) which is used to recommend recipes to the user.
+
 ## Combined Model
 
 ## Discussion
