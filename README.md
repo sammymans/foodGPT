@@ -1,7 +1,7 @@
 # foodGPT :poultry_leg:
 Created by: [@sammymans](https://www.github.com/sammymans), [@rspcunningham](https://www.github.com/rspcunningham), and [@rohansaxena1224](https://www.github.com/rohansaxena1224)
 
-foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. Only 15% of university cook regularly - the other portion cook occaisionally or never at all. Those who do cook waste approximately 50% of ingredients for several reasons: 
+foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cook occaisionally or never at all. Those who do cook waste approximately 50% of ingredients for several reasons: 
 
 - low cooking confidence
 - purchased too many groceries for the week
