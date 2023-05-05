@@ -1,6 +1,6 @@
 # foodGPT :poultry_leg:
 
-foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. A minority of 37% of university cook regularly - the other portion seldom cook or never cook. Additionally, those who cook approximately waste 50% of ingredients, making up 37% of their income. This issues arise for several reasons: 
+foodGPT is a product that aims to incorporate machine learning to optimize one's cooking experience and reducing the amount of food waste. A minority of XX% of university cook regularly - the other portion seldom cook or never cook. Additionally, those who cook approximately waste XX% of ingredients for several reasons: 
 
 - low cooking confidence
 - purchased too many groceries for the week
@@ -10,9 +10,9 @@ foodGPT has three main components: computer vision, ingredient substitution, and
 
 This project was built using [This Dataset](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions).
 
-## How it Works
-
 ## Smart Substitution Model
+
+The Smart Substitution Model first tokenizes ingredients to a unique 4-digit ID allowing a recipe to be described as a list of ingredient IDs. This list of ingredient IDs is converted to vectors using the Word2Vec model and is then compared to other recipes to find recipes with similar ingredients. The model undestands making substitutions based on the user's shelf such as replacing yellow onions for red onions or coffee for espresso.
 
 ## Matrix Factorization Recommendation Model
 
@@ -21,7 +21,3 @@ This project was built using [This Dataset](https://www.kaggle.com/datasets/shuy
 ## Discussion
 
 ## Future Considerations
-
-One objective to pursue is to implement computer vision to allow users to easily load in their 'shelf' or 'fridge' data into the application. The idea is to use computer vision to take a picture of a receipt, tokenize the groceries, and add this list of available ingredients to the application to being accurately reccomending recipes.
-
-Additionally, instead of a recommendation approach to suggesting recipes to users, a generative recipe approach could be researched. This way, our product could become more flexible to user's available ingredients, thus further reducing food waste.
