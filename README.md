@@ -1,7 +1,8 @@
 # foodGPT :poultry_leg:
 Created by: [@sammymans](https://www.github.com/sammymans) 🦧, [@rspcunningham](https://www.github.com/rspcunningham) 😈, [@rohansaxena1224](https://www.github.com/rohansaxena1224) 🦦, and [@meoson129](https://www.github.com/meoson129) :dog:
 
-Built for [Borealis AI](https://www.borealisai.com) (Lets Solve It program)
+Built for [Borealis AI](https://www.borealisai.com) (Lets Solve It program).
+
 Read our white paper [here](https://www.rspcunningham.com/foodGPT-white-paper). 
 
 foodGPT is a product that leverages machine learning to optimize one's cooking experience and to reduce the amount of food waste. Only 15% of university cook regularly - the other portion cooks occasionally or not at all. Those who do cook throw out more than 50% of their ingredients for several reasons: 
